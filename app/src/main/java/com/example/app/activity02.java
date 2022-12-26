@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,6 +40,10 @@ public class activity02 extends AppCompatActivity {
         rechercheCin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(activity02.this,activityRechercheCin.class);
                 startActivity(intent);
             }
@@ -46,6 +51,10 @@ public class activity02 extends AppCompatActivity {
         rechercheNom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent2 = new Intent(activity02.this, recherchParNom.class);
                 startActivity(intent2);
             }
@@ -53,6 +62,10 @@ public class activity02 extends AppCompatActivity {
         modificationCin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(activity02.this,activityModifiation.class);
                 startActivity(intent);
             }
@@ -60,6 +73,10 @@ public class activity02 extends AppCompatActivity {
         suppressionCin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(activity02.this,activitySuppressionCin.class);
                 startActivity(intent);
             }
@@ -67,6 +84,10 @@ public class activity02 extends AppCompatActivity {
         suppressionNom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(activity02.this,activitySuppressionNom.class);
                 startActivity(intent);
             }
@@ -74,6 +95,10 @@ public class activity02 extends AppCompatActivity {
         afficherCinCroissant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(activity02.this,activityAfficherCroissante.class);
                 startActivity(intent);
             }
@@ -81,6 +106,10 @@ public class activity02 extends AppCompatActivity {
         afficherCinDecroissant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (Groupe.check()){
+                    Toast.makeText(activity02.this, "auccun Personne dans La liste ! ", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(activity02.this,activityAfficherDecroissante.class);
                 startActivity(intent);
             }

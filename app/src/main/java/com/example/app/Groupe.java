@@ -43,6 +43,9 @@ public class Groupe {
     static public boolean check(String cin){
         return personnes.containsKey(cin.toUpperCase());
     }
+    static public boolean check(){
+        return personnes.size()==0;
+    }
     static public void modifierParCin(String cin,String nom){
         personnes.put(cin.toUpperCase(), nom.toUpperCase());
     }
