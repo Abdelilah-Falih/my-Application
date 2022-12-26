@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activity02">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Veuillez Chiosir l'un\nDes Chois Si dessous :"
+        android:textColor="#2196F3"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAjouter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ajouter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rechercheCin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Recherche par CIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAjouter" />
+
+    <Button
+        android:id="@+id/modificationCin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="modification par Cin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rechercheNom" />
+
+    <Button
+        android:id="@+id/suppressionCin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="suppression par Cin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modificationCin" />
+
+    <Button
+        android:id="@+id/suppressionNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="suppression par Nom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suppressionCin" />
+
+    <Button
+        android:id="@+id/afficherCinCroissant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="afficher par Cin croissant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suppressionNom" />
+
+    <Button
+        android:id="@+id/afficherCinDecroissant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="afficher par Cin decroissant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/afficherCinCroissant" />
+
+    <Button
+        android:id="@+id/rechercheNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Recherche par Nom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rechercheCin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
