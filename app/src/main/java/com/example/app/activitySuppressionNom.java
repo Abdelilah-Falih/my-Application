@@ -32,7 +32,6 @@ public class activitySuppressionNom extends AppCompatActivity {
         });
 
         btnSupprimerNom.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 String msg,nom;

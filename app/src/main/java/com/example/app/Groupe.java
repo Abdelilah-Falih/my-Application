@@ -7,6 +7,7 @@ import androidx.annotation.RequiresApi;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Groupe {
     static  private TreeMap<String ,String> personnes = new TreeMap<>();
@@ -52,13 +53,13 @@ public class Groupe {
         }
         return String.format("auccun personne sous CIN: %s pour Supprimer !!",cin);
     }
-    @RequiresApi(api = Build.VERSION_CODES.N)
     static public String supprimerParNom(String nom){
         int c=0;
         if(personnes.containsValue(nom.toUpperCase())){
-            for (Map.Entry<String,String> personne:personnes.entrySet()) {
+            TreeMap<String ,String> toDel= new TreeMap<>(personnes);
+            for (Map.Entry<String,String> personne:toDel.entrySet()) {
                 if(personne.getValue().equals(nom.toUpperCase())){
-                    personnes.remove(personne.getKey(),personne.getValue());
+                    supprimerParCin(personne.getKey());
                     c++;
                 }
             }
