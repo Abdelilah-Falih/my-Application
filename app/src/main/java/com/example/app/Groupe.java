@@ -46,10 +46,13 @@ public class Groupe {
         return personnes.size()==0;
     }
     static public boolean checkC(String txt,boolean isCin){
-        if (txt.isEmpty()|| txt.contains(" ")) return false;
+        if (txt.isEmpty()|| txt.equals(" ")) return false;
         if (txt.length()<3) return false;
         if(!isCin){
             for (int i = 0; i < txt.length(); i++) {
+                if(i<=3){
+                    if(txt.charAt(i)==' ') return false;
+                }
                 if (txt.charAt(i)=='1'||txt.charAt(i)=='2'||txt.charAt(i)=='3'||txt.charAt(i)=='4'||txt.charAt(i)=='5'||txt.charAt(i)=='6'||txt.charAt(i)=='7'||txt.charAt(i)=='8'||txt.charAt(i)=='9'||txt.charAt(i)=='0'){
                     return  false;
                 }
@@ -57,6 +60,7 @@ public class Groupe {
         }
 
         for (int i = 0; i < txt.length(); i++) {
+            if(isCin && txt.charAt(i)==' ') return false;
             if (txt.charAt(i)=='/' ||txt.charAt(i)=='.'||txt.charAt(i)==','||txt.charAt(i)=='£' ||txt.charAt(i)=='*'||txt.charAt(i)=='¨'||txt.charAt(i)=='^'||txt.charAt(i)=='%'||txt.charAt(i)=='&'||txt.charAt(i)=='@'||txt.charAt(i)=='('||txt.charAt(i)=='§'||txt.charAt(i)=='!'||txt.charAt(i)==')'||txt.charAt(i)=='-'||txt.charAt(i)=='_'||txt.charAt(i)=='°'||txt.charAt(i)==';'||txt.charAt(i)=='='||txt.charAt(i)=='+'||txt.charAt(i)=='?'||txt.charAt(i)=='<'||txt.charAt(i)=='>'||txt.charAt(i)=='{'||txt.charAt(i)=='}'||txt.charAt(i)=='['||txt.charAt(i)==']'){
                 return  false;
             }
