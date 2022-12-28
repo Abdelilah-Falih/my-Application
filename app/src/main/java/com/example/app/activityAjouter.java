@@ -33,9 +33,12 @@ public class activityAjouter extends AppCompatActivity {
                 txtNom = findViewById(R.id.txtNom);
                 cin = txtCin.getText().toString();
                 nom = txtNom.getText().toString();
+                if(!Groupe.checkC(nom,false)||!Groupe.checkC(cin,true)){
+                    Toast.makeText(activityAjouter.this, "veuiller saisir des valeurs valide !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 message = Groupe.ajouter(cin,nom);
                 Toast.makeText(activityAjouter.this, message, Toast.LENGTH_LONG).show();
-                //Groupe.afficher();
             }
         });
     }

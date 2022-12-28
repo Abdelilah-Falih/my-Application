@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,6 +33,10 @@ public class activityRechercheCin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String cin = txtCinRecherche.getText().toString(),message;
+                if(!Groupe.checkC(cin,true)){
+                    Toast.makeText(activityRechercheCin.this, "veuiller saisir des valeurs valide !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 message = Groupe.rechercheParCin(cin);
                 txtAfficher.setText(message);
                 //Groupe.afficher();

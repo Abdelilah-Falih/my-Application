@@ -36,6 +36,10 @@ public class activitySuppressionNom extends AppCompatActivity {
             public void onClick(View v) {
                 String msg,nom;
                 nom = txtNomSupprimer.getText().toString();
+                if(!Groupe.checkC(nom,false)){
+                    Toast.makeText(activitySuppressionNom.this, "veuiller saisir des valeurs valide !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 msg = Groupe.supprimerParNom(nom);
                 Toast.makeText(activitySuppressionNom.this, msg, Toast.LENGTH_SHORT).show();
             }

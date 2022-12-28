@@ -34,6 +34,10 @@ public class activityModifiation extends AppCompatActivity {
                 String msg,cin,nom;
                 cin = txtCinModification.getText().toString();
                 nom = txtNomModification.getText().toString();
+                if(!Groupe.checkC(nom,false)||!Groupe.checkC(cin,true)){
+                    Toast.makeText(activityModifiation.this, "veuiller saisir des valeurs valide !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 if(Groupe.check(cin)){
                     Groupe.modifierParCin(cin,nom);
                     msg = "Bien Modiffier !";

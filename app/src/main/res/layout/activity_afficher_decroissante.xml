@@ -20,6 +20,7 @@
         android:id="@+id/txtAfficherDecroissante"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/retourAfficherDecroissante"
