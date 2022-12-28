@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp"
-    tools:context=".activity01">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/t_v"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#116200EE"
         android:gravity="center"
+        android:keepScreenOn="false"
         android:text="Bien Venu Sur Notre Application\n cliquer sur le button suivante pour passer .."
         android:textSize="24sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnSuivante"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/btnSuivante"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +26,11 @@
         android:id="@+id/btnSuivante"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#116200EE"
+        android:selectAllOnFocus="false"
         android:text="Suivante"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -32,7 +38,10 @@
         android:id="@+id/btnQuitter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#111E50CA"
         android:text="Quitter"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

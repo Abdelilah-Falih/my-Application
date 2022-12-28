@@ -12,8 +12,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="horizontal|vertical"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:verticalScrollbarPosition="defaultPosition"
         app:layout_constraintBottom_toTopOf="@+id/btnRechercheNom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,12 +27,13 @@
 
     <EditText
         android:id="@+id/txtNomRecherche"
-        android:hint="saisir Un nom ..."
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
+        android:hint="saisir Un nom ..."
         android:inputType="textPersonName"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

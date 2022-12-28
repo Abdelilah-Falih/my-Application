@@ -35,7 +35,6 @@ public class activityAjouter extends AppCompatActivity {
                 nom = txtNom.getText().toString();
                 message = Groupe.ajouter(cin,nom);
                 Toast.makeText(activityAjouter.this, message, Toast.LENGTH_LONG).show();
-                //Groupe.afficher();
             }
         });
     }
