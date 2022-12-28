@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,6 +34,10 @@ public class recherchParNom extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nom = txtNomRecherche.getText().toString(),message;
+                if(!Groupe.checkC(nom,false)){
+                    Toast.makeText(recherchParNom.this, "veuiller saisir des valeurs valide !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 message = Groupe.rechercheParNom(nom);
                 txtAfficherParNom.setText(message);
                 //Groupe.afficher();

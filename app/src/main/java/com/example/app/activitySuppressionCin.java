@@ -34,6 +34,10 @@ public class activitySuppressionCin extends AppCompatActivity {
             public void onClick(View v) {
                 String msg,cin;
                 cin = txtCinSupprimer.getText().toString();
+                if(!Groupe.checkC(cin,true)){
+                    Toast.makeText(activitySuppressionCin.this, "veuiller saisir des valeurs valide !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 msg = Groupe.supprimerParCin(cin);
                 Toast.makeText(activitySuppressionCin.this, msg, Toast.LENGTH_SHORT).show();
             }

@@ -11,7 +11,6 @@ import java.util.TreeSet;
 
 public class Groupe {
     static  private TreeMap<String ,String> personnes = new TreeMap<>();
-    //public Groupe(){};
 
     static public String ajouter(String cin,String nom){
         if(personnes.containsKey(cin.toUpperCase())) return "Ce CIN est Déjà dans La liste !! ";
@@ -45,6 +44,24 @@ public class Groupe {
     }
     static public boolean check(){
         return personnes.size()==0;
+    }
+    static public boolean checkC(String txt,boolean isCin){
+        if (txt.isEmpty()|| txt.contains(" ")) return false;
+        if (txt.length()<3) return false;
+        if(!isCin){
+            for (int i = 0; i < txt.length(); i++) {
+                if (txt.charAt(i)=='1'||txt.charAt(i)=='2'||txt.charAt(i)=='3'||txt.charAt(i)=='4'||txt.charAt(i)=='5'||txt.charAt(i)=='6'||txt.charAt(i)=='7'||txt.charAt(i)=='8'||txt.charAt(i)=='9'||txt.charAt(i)=='0'){
+                    return  false;
+                }
+            }
+        }
+
+        for (int i = 0; i < txt.length(); i++) {
+            if (txt.charAt(i)=='/' ||txt.charAt(i)=='.'||txt.charAt(i)==','||txt.charAt(i)=='£' ||txt.charAt(i)=='*'||txt.charAt(i)=='¨'||txt.charAt(i)=='^'||txt.charAt(i)=='%'||txt.charAt(i)=='&'||txt.charAt(i)=='@'||txt.charAt(i)=='('||txt.charAt(i)=='§'||txt.charAt(i)=='!'||txt.charAt(i)==')'||txt.charAt(i)=='-'||txt.charAt(i)=='_'||txt.charAt(i)=='°'||txt.charAt(i)==';'||txt.charAt(i)=='='||txt.charAt(i)=='+'||txt.charAt(i)=='?'||txt.charAt(i)=='<'||txt.charAt(i)=='>'||txt.charAt(i)=='{'||txt.charAt(i)=='}'||txt.charAt(i)=='['||txt.charAt(i)==']'){
+                return  false;
+            }
+        }
+        return true;
     }
     static public void modifierParCin(String cin,String nom){
         personnes.put(cin.toUpperCase(), nom.toUpperCase());
