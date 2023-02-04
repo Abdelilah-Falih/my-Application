@@ -25,7 +25,7 @@ A simple and user-friendly ```Android app ``` for managing daily tasks and activ
 ### Add
 ![Add](screenshots/Add.jpg "Add ")
 ---
-### search By Name
+### search By CIN
 ![search By Name](screenshots/searchByName.jpg "search By Name ")
 ---
 ### Display_all_ascending
@@ -45,5 +45,3 @@ A simple and user-friendly ```Android app ``` for managing daily tasks and activ
 ## Contribution
 Feel free to contribute to the development of this app by submitting pull requests.
 
-## License
-This project is licensed under the MIT License.
