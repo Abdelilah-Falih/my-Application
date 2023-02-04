@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Veuillez Chiosir l'un\nDes Chois Si dessous :"
+        android:text="Veuillez en sélectionner une parmi les options suivantes"
         android:textColor="#616200EE"
         android:textSize="34sp"
         android:textStyle="bold|italic"
